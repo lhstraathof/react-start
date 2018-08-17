@@ -12,7 +12,7 @@
         "lint": "eslint src",
         "test": "jest",
         "develop": "webpack-dev-server",
-        "build": "webpack"
+        "build": "webpack --config webpack.prod.js"
     },
     "lint-staged": {
         "src/**/*.{js,jsx}": [
@@ -34,6 +34,7 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-latest": "^6.24.1",
         "babel-preset-react": "^6.24.1",
+        "copy-webpack-plugin": "^4.5.2",
         "css-loader": "^0.28.11",
         "enzyme": "^3.4.3",
         "enzyme-adapter-react-16": "^1.2.0",
@@ -44,7 +45,9 @@
         "jest-css-modules": "^1.1.0",
         "lint-staged": "^7.2.2",
         "live-server": "^1.2.0",
+        "mini-css-extract-plugin": "^0.4.1",
         "node-sass": "^4.9.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.0",
         "sass-loader": "^7.0.1",
         "style-loader": "^0.21.0",
         "webpack": "^4.8.3",

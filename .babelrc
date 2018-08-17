@@ -3,6 +3,7 @@
         "env",
         "react"
     ],
+    "compact" : true,
     "plugins": [
         "transform-class-properties"
     ]
