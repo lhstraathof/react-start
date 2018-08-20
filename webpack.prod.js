@@ -25,7 +25,8 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    "sass-loader"
+                    "sass-loader",
+                    "postcss-loader"
                 ],
                 exclude: [
                     '/node_modules',
@@ -52,7 +53,7 @@ module.exports = {
                 ignore: ['bundle.js']
             }
         ])
-    ],
+    ]
 };
 
 // loader - used to transform files
