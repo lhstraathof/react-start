@@ -24,7 +24,14 @@ module.exports = {
                 test: /\.s?css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[sha1:hash:hex:4]'
+                        }
+                    },
                     "sass-loader",
                     "postcss-loader"
                 ],
