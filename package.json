@@ -9,7 +9,7 @@
     "private": true,
     "scripts": {
         "precommit": "lint-staged && yarn run test",
-        "lint": "eslint src",
+        "lint": "eslint src/**/*.js src/**/*.jsx",
         "test": "jest",
         "start": "webpack-dev-server",
         "build": "webpack --config webpack.prod.js"
