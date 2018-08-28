@@ -7,6 +7,7 @@ module.exports = {
         path: path.join(__dirname, '/public')
     },
     mode: 'development',
+    devtool: "source-map",
     module: {
         rules: [
             { 
@@ -17,9 +18,27 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader", 
+                        options: {
+                            sourceMap: true,
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[sha1:hash:hex:4]'
+                        }
+                    },
+                    {
+                        loader: "sass-loader", 
+                        options: {
+                            sourceMap: true,
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[sha1:hash:hex:4]'
+                        }
+                    }
                 ],
                 // use: 'babel-loader',
                 exclude: '/node_modules'
